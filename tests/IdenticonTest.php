@@ -6,9 +6,9 @@ use Jdenticon\Identicon;
 use Jdenticon\IdenticonStyle;
 use Jdenticon\Rendering\IconGenerator;
 
-class AnotherIconGenerator extends IconGenerator 
+class AnotherIconGenerator extends IconGenerator
 {
-    public function __construct() 
+    public function __construct()
     {
     }
 }
