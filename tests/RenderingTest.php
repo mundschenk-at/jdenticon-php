@@ -8,7 +8,7 @@ use Jdenticon\Rendering\IconGenerator;
 use Jdenticon\Rendering\InternalPngRenderer;
 use Jdenticon\Rendering\ImagickRenderer;
 
-final class RenderingTest extends PHPUnit_Framework_TestCase
+final class RenderingTest extends PHPUnit\Framework\TestCase
 {
     public function testIcon39()
     {

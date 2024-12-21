@@ -4,8 +4,7 @@
  * https://github.com/dmester/jdenticon-php/
  * 
  * Copyright (c) 2018 Daniel Mester Pirttijärvi
- * 
- * For full license information, please see the LICENSE file that was 
+ * Copyright (c) 2024 Peter Putzer
  * distributed with this source code.
  */
 
@@ -53,7 +52,7 @@ class IdenticonStyle
      */
     private $hues;
     
-    public function __construct(array $options = null)
+    public function __construct(?array $options = null)
     {
         $this->backgroundColor = self::getDefaultBackgroundColor();
         $this->padding = self::getDefaultPadding();

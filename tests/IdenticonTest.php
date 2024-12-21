@@ -13,7 +13,7 @@ class AnotherIconGenerator extends IconGenerator
     }
 }
 
-final class IdenticonTest extends PHPUnit_Framework_TestCase
+final class IdenticonTest extends \PHPUnit\Framework\TestCase
 {
     public function testSetValue()
     {
@@ -38,11 +38,10 @@ final class IdenticonTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(false, isset($options['value']));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSetSizeTooLow()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $icon = new Identicon(array('size' => 0));
     }
     public function testSetSize()
@@ -52,18 +51,16 @@ final class IdenticonTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(42, $options['size']);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSetEnableImageMagickInvalid()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $icon = new Identicon(array('enableimagemagick' => 55));
     }
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSetEnableImageMagickNull()
     {
+        $this->expectException(\InvalidArgumentException::class);
+
         $icon = new Identicon(array('enableimagemagick' => null));
     }
     public function testSetEnableImageMagick()

@@ -4,8 +4,7 @@
  * https://github.com/dmester/jdenticon-php/
  * 
  * Copyright (c) 2018 Daniel Mester Pirttijärvi
- * 
- * For full license information, please see the LICENSE file that was 
+ * Copyright (c) 2024 Peter Putzer
  * distributed with this source code.
  */
 
@@ -69,7 +68,7 @@ class Identicon
      * @param int|float|double $size The size of the icon in pixels (the icon 
      *      is quadratic).
      */
-    public function __construct($options = null)
+    public function __construct(?array $options = null)
     {
         $this->iconGenerator = IconGenerator::getDefaultGenerator();
         
